@@ -89,8 +89,7 @@ class RatesAdapter :
         )
     }
 
-    override fun getItemCount(): Int =
-        currentRatesList.size
+    override fun getItemCount(): Int = currentRatesList.size
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val rateItem = currentRatesList[position]
