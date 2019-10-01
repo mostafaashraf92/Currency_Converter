@@ -43,12 +43,8 @@ class RatesAdapter :
 
     @UiThread
     private fun updateCurrentRatesFromNewRates() {
-        currentRatesList =
-            ratesListsHelper.updateCurrentRatesFromNewRates(
-                currentRatesList, newRatesList,
-                ratesMappedModel
-            )
-
+        currentRatesList = ratesListsHelper.updateCurrentRatesFromNewRates(
+            currentRatesList, newRatesList, ratesMappedModel)
 
         CoroutineScope(Dispatchers.Main).launch{
             if (currentRatesList[0].value == 0f)
