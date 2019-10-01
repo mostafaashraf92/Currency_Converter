@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rates_screen_padding_top">10dp</dimen>
+    <dimen name="title_margin_start">40dp</dimen>
+    <dimen name="rates_item_margin_start">16dp</dimen>
+    <dimen name="rates_item_padding">16dp</dimen>
+    <dimen name="currency_code_text_size">16sp</dimen>
+    <dimen name="currencey_label_text_size">14sp</dimen>
+    <dimen name="rate_edit_text_size">20sp</dimen>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="@dimen/rates_item_padding">
+
+
+        <TextView
+            android:id="@+id/emojiTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="hi" />
+
+        <LinearLayout
+            android:id="@+id/currencyNameContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/rates_item_margin_start"
+            app:layout_constraintBaseline_toBaselineOf="@+id/emojiTxtView"
+            app:layout_constraintEnd_toStartOf="@id/currencyRateEditTxtView"
+            app:layout_constraintStart_toEndOf="@+id/emojiTxtView">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currencyTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/currency_code_text_color"
+                android:textSize="@dimen/currency_code_text_size"
+                tools:text="EUR" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currenceNameTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/currency_label_color"
+                android:textSize="@dimen/currencey_label_text_size"
+                tools:text="EUR" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/currencyRateEditTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:digits="0,1,2,3,4,5,6,7,8,9,."
+            android:focusableInTouchMode="true"
+            android:hint="@string/edit_text_hint_text"
+            android:
+            android:inputType="number"
+            android:textColor="@color/currency_value_text_color"
+            android:textSize="@dimen/rate_edit_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@id/emojiTxtView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
