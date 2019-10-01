@@ -82,11 +82,7 @@ class RatesAdapter :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         return ItemViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.rates_view_holder, parent,
-                false
-            )
-            , this
-        )
+                R.layout.rates_view_holder, parent, false), this)
     }
 
     override fun getItemCount(): Int = currentRatesList.size
